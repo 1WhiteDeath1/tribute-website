@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="course-registration.css">
+    <title>Course Registration</title>
+</head>
+<body>
+    <header class="reg-header">
+        <div class="brand">FAST Course Registration</div>
+    </header>
+
+    <main class="reg-main">
+        <section class="student-panel">
+            <h2>Student Details</h2>
+            <form id="studentForm" class="student-form">
+                <label for="studentIdInput">Student ID</label>
+                <input type="text" id="studentIdInput" placeholder="e.g. FA21-BCS-001" required>
+
+                <label for="studentNameInput">Full Name</label>
+                <input type="text" id="studentNameInput" placeholder="Your name" required>
+
+                <label for="studentEmailInput">Email (optional)</label>
+                <input type="email" id="studentEmailInput" placeholder="you@example.com">
+
+                <button type="submit" class="btn btn-primary">Save Details</button>
+            </form>
+            <p id="formStatus" class="form-status"></p>
+
+            <h2>My Schedule</h2>
+            <div id="schedulePanel" class="schedule-panel"></div>
+        </section>
+
+        <section class="sections-panel">
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Search by course code or title">
+                <select id="deptFilter">
+                    <option value="">All departments</option>
+                    <option value="CS">CS</option>
+                    <option value="MATH">MATH</option>
+                    <option value="ENG">ENG</option>
+                    <option value="PHY">PHY</option>
+                </select>
+            </div>
+            <h2>Offered Sections</h2>
+            <div id="sectionsList" class="sections-list"></div>
+        </section>
+    </main>
+
+    <script src="course-registration.js"></script>
+</body>
+</html>
